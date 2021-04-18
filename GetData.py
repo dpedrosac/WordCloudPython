@@ -98,5 +98,8 @@ if __name__ == '__main__':
                      '22526237',
                      '32450842',
                      ])
-
-    GetAbtractsFromPubmed(list_PID, _email='pedrosac@staff.uni-marburg.de', _debug=False)
+    email = ''
+    if not email:
+        print('no email was entered in "GetData.py')
+    else:
+        GetAbtractsFromPubmed(list_PID, _email=email, _debug=False)

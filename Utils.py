@@ -136,7 +136,7 @@ class HelperFunctions:
                              "pu", "put", "py", "q", "qj", "qu", "que", "quickly", "quite", "qv", "r", "r2", "ra",
                              "ran", "rather", "rc", "rd", "re", "readily", "really", "reasonably", "recent",
                              "recently", "ref", "refs", "regarding", "regardless", "regards", "related",
-                             "relatively", "respectively", "resulted", "resulting", "rf", "rh", "ri",
+                             "relatively", "respectively", "result", "resulted", "resulting", "rf", "rh", "ri",
                              "right", "rj", "rl", "rm", "rn", "ro", "rq", "rr", "rs", "rt", "ru", "run", "rv", "ry",
                              "s", "s2", "sa", "said", "same", "saw", "say", "saying", "says", "sc", "sd", "se",
                              "sec", "second", "secondly", "section", "see", "seeing", "seem", "seemed", "seeming",
@@ -148,12 +148,12 @@ class HelperFunctions:
                              "so", "some", "somebody", "somehow", "someone", "somethan", "something", "sometime",
                              "sometimes", "somewhat", "somewhere", "soon", "sorry", "sp", "specifically",
                              "specified", "specify", "specifying", "sq", "sr", "ss", "st", "still", "stop",
-                             "strongly", "sub", "substantially", "successfully", "such", "sufficiently", "suggest",
-                             "sup", "sure", "sy", "system", "sz", "t", "t1", "t2", "t3", "take", "taken", "taking",
-                             "tb", "tc", "td", "te", "tell", "ten", "tends", "tf", "th", "than", "thank", "thanks",
-                             "thanx", "that", "that'll", "thats", "that's", "that've", "the", "their", "theirs",
-                             "them", "themselves", "then", "thence", "there", "thereafter", "thereby", "thered",
-                             "therefore", "therein", "there'll", "thereof", "therere", "theres", "there's",
+                             "strongly", "study", "sub", "substantially", "successfully", "such", "sufficiently",
+                             "suggest", "sup", "sure", "sy", "system", "sz", "t", "t1", "t2", "t3", "take", "taken",
+                             "taking", "tb", "tc", "td", "te", "tell", "ten", "tends", "tf", "th", "than", "thank",
+                             "thanks", "thanx", "that", "that'll", "thats", "that's", "that've", "the", "their",
+                             "theirs", "them", "themselves", "then", "thence", "there", "thereafter", "thereby",
+                             "thered", "therefore", "therein", "there'll", "thereof", "therere", "theres", "there's",
                              "thereto", "thereupon", "there've", "these", "they", "theyd", "they'd", "they'll",
                              "theyre", "they're", "they've", "thickv", "thin", "think", "third", "this", "thorough",
                              "thoroughly", "those", "thou", "though", "thoughh", "thousand", "three", "throug",
@@ -187,6 +187,7 @@ class HelperFunctions:
                               'however', 'within', 'conclusion', 'background:', 'background',
                               'n', 'pc', 'often', '.', '.-', "ci", "four", "would", "across", "five", "due", 'p=',
                               'may', 'also', 'make', 'many', 'likely', 'although', '.', 'overall', 'whether', 'could',
-                              'despite', 'toward', 'towards', 'respectively', 'and/or', '..', 's', 't', 'n']
+                              'despite', 'toward', 'towards', 'respectively', 'and/or', '..', 's', 't', 'n', "result",
+                              "results"]
 
         return specific_stopwords

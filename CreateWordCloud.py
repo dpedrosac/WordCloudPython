@@ -38,6 +38,8 @@ class ProcessResults:
                          "paediatric": ["paediatric", "pediatric"],
                          "Patient safety": ["Patient safety", "patient-safety"],
                          "patients' safety": ["patients' safety", "patient-safety"],
+                         "parkinson's disease": ["parkinson's' disease", "parkinsons-disease"],
+                         "parkinson's disease": ["parkinson syndrome", "parkinsons-disease"],
                          "patient's safety": ["patient's' safety", "patient-safety"],
                          "patient safety": ["patient safety", "patient-safety"],
                          "terminally-ill": ["terminally ill", "terminally-ill"],
@@ -53,12 +55,15 @@ class ProcessResults:
                          "quality of life": ["quality of life", "quality-of-life"],
                          "qol": ["qol", "quality-of-life"],
                          "eol": [" eol ", " end-of-life "],
+                         "levodopa": ["ldopa", "l-dopa"],
                          "eolc": [" eolc ", " end-of-life-care "],
                          "gp": [" gp ", " general-practitioners "],
                          "gps": [" gps ", " general-practitioners "],
                          "icu": [" icu ", " intensive-care-unit "],
                          "dnr": ["dnr", "do-not-resuscitate"],
-                         "DBS": ["dbs", "deep-brain-stimulation"]
+                         "DBS": ["dbs", "deep-brain-stimulation"],
+                         "deep brain stimulation": ["brain stimulation", "brain-stimulation", "deep brain",
+                                                    "deep-brain"]
                          }
 
         allfiles = os.listdir(data_directory)
@@ -168,10 +173,17 @@ class GenerateOutput:
     def create_wordcloud():
         from wordcloud import WordCloud
         import matplotlib.pyplot as plt
-        with open(os.path.join(ROOTDIR, 'data', 'pp_all_abstracts.txt'), 'r+') as file_object:
+        with open(os.path.join(ROOTDIR, 'data', 'pp_all_abstracts.txt'), 'r') as file_object:
             text = file_object.read()
-        wordcloud = WordCloud(background_color="white", width=1900, height=800, colormap='bone').generate(text)
+
+        wordcloud = WordCloud(background_color="white", width=2000, height=1000, max_words=200).generate(text)
+
+        def black_color_func(word, font_size, position, orientation, random_state=None, **kwargs):
+            return "hsl(0,100%, 1%)"
+        wordcloud.recolor(color_func=black_color_func)
+
         plt.imshow(wordcloud, interpolation="bilinear")
+        plt.axis('off')
         plt.show()
 
 
